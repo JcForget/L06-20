@@ -2,42 +2,51 @@ import math
 
 
 def resoudreEquation(a, b, c):
-    # TODO: Calculer le discriminant et assigner la valeur dans la variable "delta"
-    delta =
 
-    # TODO: Déterminer la condition (bool) qui correspond à aucune solution de l'équation et mettre la valeur dans la variable "naPasDeSolution"
-    naPasDeSolution =
+    #Définition variables
+    naPasDeSolution=aUneSeuleSolution=aDeuxSolutions=False
+
+
+    # DONE: Calculer le discriminant et assigner la valeur dans la variable "delta"
+    delta = (b**2)-4*a*c
+
+    # DONE: Déterminer la condition (bool) qui correspond à aucune solution de l'équation et mettre la valeur dans la variable "naPasDeSolution"
+    if delta<0:
+        naPasDeSolution = True
+
 
     if naPasDeSolution:
-        # ces ligne de code seront executé si il y'a aucune racine
-        # TODO: afficher sur l'écran "Aucune racine"
-
+        # ces lignes de code seront executés s'il n'y aucune racine
+        # DONE: afficher sur l'écran "Aucune racine"
+        print('\n Aucune solution réelle \n')
         # ne pas modifier
         return None
 
-    # TODO: Déterminer la condition (bool) qui correspond à une unique solution de l'équation et mettre la valeur dans "aUneSeuleSolution"
-    aUneSeuleSolution =
+    # DONE: Déterminer la condition (bool) qui correspond à une unique solution de l'équation et mettre la valeur dans "aUneSeuleSolution"
+    if delta==0:
+        aUneSeuleSolution = True
 
     if aUneSeuleSolution:
-        # ces ligne de code seront executé si il y'a une seule racine
-        # TODO: afficher sur l'écran "Une seule racine"
-
-        # TODO: assigner a la variable x1 la valeur de la racine
-        x1 =
+        # ces lignes de code seront executés s'il n'y a qu'une seule racine
+        # DONE: afficher sur l'écran "Une seule racine"
+        print('\n Une seule racine \n')
+        # DONE: assigner a la variable x1 la valeur de la racine
+        x1 = -b/(2*a)
         # ne pas modifier
         return x1
 
-    # TODO: Déterminer la condition (bool) qui correspond à deux solutions de l'équation et mettre la valeur dans "aDeuxSolutions"
-    aDeuxSolutions =
+    # DONE: Déterminer la condition (bool) qui correspond à deux solutions de l'équation et mettre la valeur dans "aDeuxSolutions"
+    if delta>0:
+        aDeuxSolutions = True
 
     if aDeuxSolutions:
-        # TODO: afficher sur l'écran "Deux racines"
+        # DONE: afficher sur l'écran "Deux racines"
+        print('\n Deux racines \n')
+        # DONE: calculer la prmiere racine, assigner la a "x1"
+        x1 =(-b+delta**(0.5))/(2*a)
 
-        # TODO: calculer la prmiere racine, assigner la a "x1"
-        x1 =
-
-        # TODO: calculer la deuxieme racine, assigner la a "x2"
-        x2 =
+        # DONE: calculer la deuxieme racine, assigner la a "x2"
+        x2 = (-b-delta**(0.5))/(2*a)
 
         # ne pas modifier cette ligne
         return x1, x2
