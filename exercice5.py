@@ -1,10 +1,10 @@
 def pointDeRencontre(v1, v2, distance):
     temps = 0
-    # TODO faites les calculs intermediaires, vous pouvez initialiser des variables locales.
+    # DONE faites les calculs intermediaires, vous pouvez initialiser des variables locales.
     if distance !=0:
         temps = distance/(v1+v2)
 
-    # TODO calculer la position de rencontre, assignez la valeur à la variable "positionRencontre"
+    # DONE calculer la position de rencontre, assignez la valeur à la variable "positionRencontre"
     positionRencontre = v1 * temps
 
     return positionRencontre
