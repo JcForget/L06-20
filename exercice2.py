@@ -4,7 +4,7 @@ import math
 def resoudreEquation(a, b, c):
 
     #Définition variables
-    naPasDeSolution=aUneSeuleSolution=aDeuxSolutions=False
+    naPasDeSolution = aUneSeuleSolution = aDeuxSolutions = False
 
 
     # DONE: Calculer le discriminant et assigner la valeur dans la variable "delta"
